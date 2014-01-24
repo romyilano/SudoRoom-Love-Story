@@ -1,0 +1,64 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "renpy/common/_layout/screen_main_menu.rpym", line 11, in script
+IOError: Couldn't find file 'mage/backgrounds/startpage.png'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/execution.py", line 288, in run
+    node.execute()
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ast.py", line 720, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/python.py", line 1308, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/_layout/screen_main_menu.rpym", line 11, in <module>
+    $ ui.interact()
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ui.py", line 237, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 1853, in interact
+    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 2168, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 1418, in draw_screen
+    renpy.config.screen_height,
+  File "render.pyx", line 365, in renpy.display.render.render_screen (gen/renpy.display.render.c:4568)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/screen.py", line 295, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 909, in render
+    back = render(style.background, bw, bh, st, at)
+  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 463, in render
+    im = cache.get(self)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 196, in get
+    surf = image.load()
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 507, in load
+    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/loader.py", line 428, in load
+    raise IOError("Couldn't find file '%s'." % name)
+IOError: Couldn't find file 'mage/backgrounds/startpage.png'.
+
+Darwin-13.0.0-x86_64-i386-64bit
+Ren'Py 6.16.5.525
+SudoRoom: a Love Story 0.0
