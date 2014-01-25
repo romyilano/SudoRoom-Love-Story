@@ -51,14 +51,62 @@ image bg mainroom meeting = "images/backgrounds/mainroom/meeting.jpg"
 image bg mainroom workshop = "images/backgrounds/mainroom/workshop3dprinting.png"
 
 # Declare characters used by this game.
-define e = Character('Eileen', color="#c8ffc8")
-
+define m = Character('Me', color="#c8ffc8")
+define s = Character('SudoCat', color="#c8ffc8")
+define g = Character('Greene', color="#cccccc")
+define b = Character('Boxy Box', color="#e5eeee")
+define peeps = Character('SudoRoom People', color="#c8ffc8")
 
 # The game starts here.
 label start:
+    
+scene bg artmurmur cars 
+with dissolve 
 
-    e "You've created a new Ren'Py game."
+"Another Oakland Art Murmur, with booming bass cars, sticky fingered tacos, and beers sipped in paper bags"
+  
+scene bg artmurmur gallery
+with dissolve
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+"You wander down the street passing by all the strutting peacocks, sexy ladies in their lovely mating dance. It's so hustling and bustling during the art mrumur!"
+   
+scene bg artmurmur crowd
+with dissolve
 
-    return
+"Still... something seems to be missing... some kind of purpose?"
+
+scene bg artmurmur sign
+with dissolve
+
+m "SudoRoom? An afterparty? I wonder what that is."
+m "What a weird little sign. Is this some kind of secret society?"
+
+show sudocat faceright normal at left
+
+s "Hey! Hey! Hey!"
+
+show sudocat faceright normal tiltback at left
+
+s "So you're interested in SudoRoom?" 
+
+show sudocat faceright normal tiltforward at left
+
+m "Sudo... What?"
+
+show sudocat faceright normal at left
+s "SudoRoom! The sign. See... it's a hackerspace. You're the only one of these people paying attention to that sign. That's what I call... a good sign!"
+show sudocat faceright normal tiltforward at left
+m "Yeah I was wondering what that is. What's a hackerspace?"
+show sudocat faceright normal at left
+s "What's a hackerspace? Well, that's actually both a simple and a complicated answer..."
+show sudocat faceright normal tiltback at left
+s "You really should drop by and see for yourself."
+m "Oh, OK. But what is a hackerspace? I heard about them in the news. Aren't they places for people who hack into stuff? Steal government documents and credit cards?"
+s "Wow! We have a lot to work on with you."
+
+
+label end:
+    
+    
+
+return
