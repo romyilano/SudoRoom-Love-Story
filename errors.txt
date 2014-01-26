@@ -2,8 +2,36 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 79: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
-    return
-    ^
+File "game/script.rpy", line 294: end of line expected.
+    jump tutorial-3DPrinter
+                 ^
+
+File "game/script.rpy", line 296: end of line expected.
+    jump tutorial-activism
+                 ^
+
+File "game/script.rpy", line 298: end of line expected.
+    jump tutorial-biohacking
+                 ^
+
+File "game/script.rpy", line 300: end of line expected.
+    jump tutorial-bikes
+                 ^
+
+File "game/script.rpy", line 303: expected ':' not found.
+    label tutorial-3DPrinter:
+                  ^
+
+File "game/script.rpy", line 310: expected ':' not found.
+    label tutorial-activism:
+                  ^
+
+File "game/script.rpy", line 317: expected ':' not found.
+    label tutorial-biohacking:
+                  ^
+
+File "game/script.rpy", line 324: expected ':' not found.
+    label tutorial-bikes:
+                  ^
 
 Ren'Py Version: Ren'Py 6.16.5.525

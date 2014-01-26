@@ -1,20 +1,24 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 11, in script
-IOError: Couldn't find file 'mage/backgrounds/startpage.png'.
+  File "game/script.rpy", line 187, in script
+IOError: Couldn't find file 'images/characters/boxybox/boxybox-normal-left-headup.pngg'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/execution.py", line 288, in run
     node.execute()
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ast.py", line 720, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/python.py", line 1308, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/_layout/screen_main_menu.rpym", line 11, in <module>
-    $ ui.interact()
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ast.py", line 455, in execute
+    renpy.exports.say(who, what, interact=self.interact)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/exports.py", line 853, in say
+    who(what, interact=interact)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 807, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 673, in do_display
+    **display_args)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 476, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ui.py", line 237, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 1853, in interact
@@ -37,16 +41,12 @@ Full traceback:
     surf = render(child, width, height, cst, cat)
   File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
   File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/screen.py", line 295, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
+  File "accelerator.pyx", line 109, in renpy.display.accelerator.transform_render (gen/renpy.display.accelerator.c:1298)
   File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 909, in render
-    back = render(style.background, bw, bh, st, at)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/image.py", line 164, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/image.py", line 54, in wrap_render
+    rend = render(child, w, h, st, at)
   File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
   File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
   File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 463, in render
@@ -57,7 +57,7 @@ Full traceback:
     surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
   File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/loader.py", line 428, in load
     raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'mage/backgrounds/startpage.png'.
+IOError: Couldn't find file 'images/characters/boxybox/boxybox-normal-left-headup.pngg'.
 
 Darwin-13.0.0-x86_64-i386-64bit
 Ren'Py 6.16.5.525
