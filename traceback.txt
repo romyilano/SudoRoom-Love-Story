@@ -1,64 +1,21 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/script.rpy", line 187, in script
-IOError: Couldn't find file 'images/characters/boxybox/boxybox-normal-left-headup.pngg'.
+While loading the script.
+IOError: [Errno 22] Invalid argument
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/execution.py", line 288, in run
-    node.execute()
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ast.py", line 455, in execute
-    renpy.exports.say(who, what, interact=self.interact)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/exports.py", line 853, in say
-    who(what, interact=interact)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 807, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 673, in do_display
-    **display_args)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/character.py", line 476, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/ui.py", line 237, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 1853, in interact
-    repeat, rv = self.interact_core(preloads=preloads, **kwargs)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 2168, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/core.py", line 1418, in draw_screen
-    renpy.config.screen_height,
-  File "render.pyx", line 365, in renpy.display.render.render_screen (gen/renpy.display.render.c:4568)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/layout.py", line 521, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "accelerator.pyx", line 109, in renpy.display.accelerator.transform_render (gen/renpy.display.accelerator.c:1298)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/image.py", line 164, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/image.py", line 54, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 95, in renpy.display.render.render (gen/renpy.display.render.c:2291)
-  File "render.pyx", line 166, in renpy.display.render.render (gen/renpy.display.render.c:2033)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 463, in render
-    im = cache.get(self)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 196, in get
-    surf = image.load()
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/display/im.py", line 507, in load
-    surf = renpy.display.pgrender.load_image(renpy.loader.load(self.filename), self.filename)
-  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/loader.py", line 428, in load
-    raise IOError("Couldn't find file '%s'." % name)
-IOError: Couldn't find file 'images/characters/boxybox/boxybox-normal-left-headup.pngg'.
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/bootstrap.py", line 265, in bootstrap
+    renpy.main.main()
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/main.py", line 226, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/script.py", line 177, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "/Users/romyilano/Developer/python/renpy-6.16.5-sdk/renpy/script.py", line 430, in load_appropriate_file
+    f.seek(-md5.digest_size, 2)
+IOError: [Errno 22] Invalid argument
 
 Darwin-13.0.0-x86_64-i386-64bit
 Ren'Py 6.16.5.525
-SudoRoom: a Love Story 0.0
+ 
