@@ -5,4 +5,6 @@ It will function also as a tutorial showing how to use various parts of the spac
 
 Wiki: https://sudoroom.org/wiki/SudoRoomVisualNovelGame
 
-![SudoRoom](https://github.com/romyilano/SudoRoom-Love-Story/blob/master/game/images/characters/sudocat/sudocat-eyesclosed-normal-tiltleft.png)
+![SudoRoom Cat](https://raw2.github.com/romyilano/SudoRoom-Love-Story/master/game/images/characters/sudocat/sudocat-eyesclosed-normal-tiltleft.png)
+
+
