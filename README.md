@@ -12,4 +12,4 @@ Wiki: [https://sudoroom.org/wiki/SudoRoomVisualNovelGame](https://sudoroom.org/w
 # Videos
 
 
-![video](images/prototypeRecording.mov)
+![video](images/prototypeRecording_sm.mov)
